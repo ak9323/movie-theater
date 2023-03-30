@@ -7,7 +7,7 @@ In addition of cleaning up the existing classess, added new classes to better se
 
 Description of <b>new</b> classes:
 
-<b>Schedule (interface)</b> - a class inmplementing this interface is responsible for taking a list of movies and arranging the movies into a list of showings thus creating a schedule.
+<b>Schedule (interface)</b> - a class implementing this interface is responsible for taking a list of movies and arranging the movies into a list of showings thus creating a schedule.
 
 <b>SequentialScheduler</b> - implements Schedule. Shedules movies in sequential order. Takes a list of movies and turns it into a list of showings.
 
