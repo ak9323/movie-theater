@@ -150,5 +150,17 @@ class PricingTests {
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(0F - newPrice) < 0.001F);
 	}
+
+	@Test
+	public void Discount7thOfTheDayNegative2() throws TheaterException {
+		//Copy of preceding method to test git functionality.
+		float regularPrice = 0.5F;
+		Showing showing = new Showing(7,
+				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
+				LocalTime.of(16, 00));
+		Discount discount = new Discount7thOfTheDay();
+		float newPrice = discount.getPrice(showing, regularPrice);
+		assertTrue(Math.abs(0F - newPrice) < 0.001F);
+	}
 	
 }
