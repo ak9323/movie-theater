@@ -38,7 +38,7 @@ class PricingTests {
 		float regularPrice = 15F;
 		Showing showing = new Showing(1,
 				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
-				LocalTime.of(8, 00));
+				LocalTime.of(8, 0));
 		Discount discount = new Discount1stOfTheDay();
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(regularPrice - 3F - newPrice) < 0.001F);
@@ -60,9 +60,9 @@ class PricingTests {
 		float regularPrice = 15F;
 		Movie movie = new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null);
 		Showing showing1 = new Showing(1, movie, LocalTime.of(10, 59));
-		Showing showing2 = new Showing(2, movie, LocalTime.of(11, 00));
-		Showing showing3 = new Showing(3, movie, LocalTime.of(16, 00));
-		Showing showing4 = new Showing(4, movie, LocalTime.of(16, 01));
+		Showing showing2 = new Showing(2, movie, LocalTime.of(11, 0));
+		Showing showing3 = new Showing(3, movie, LocalTime.of(16, 0));
+		Showing showing4 = new Showing(4, movie, LocalTime.of(16, 1));
 		Discount discount = new Discount11amTo4pm();
 		float newPrice1 = discount.getPrice(showing1, regularPrice);
 		float newPrice2 = discount.getPrice(showing2, regularPrice);
@@ -79,7 +79,7 @@ class PricingTests {
 		float regularPrice = 15F;
 		Showing showing = new Showing(7,
 				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
-				LocalTime.of(16, 00));
+				LocalTime.of(16, 0));
 		Discount discount = new Discount7thOfTheDay();
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(regularPrice - 1F - newPrice) < 0.001F);
@@ -90,7 +90,7 @@ class PricingTests {
 		float regularPrice = 3F;
 		Showing showing = new Showing(1,
 				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
-				LocalTime.of(8, 00));
+				LocalTime.of(8, 0));
 		Discount discount = new Discount1stOfTheDay();
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(0F - newPrice) < 0.001F);
@@ -112,7 +112,7 @@ class PricingTests {
 		float regularPrice = 1F;
 		Showing showing = new Showing(7,
 				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
-				LocalTime.of(16, 00));
+				LocalTime.of(16, 0));
 		Discount discount = new Discount7thOfTheDay();
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(0F - newPrice) < 0.001F);
@@ -123,7 +123,7 @@ class PricingTests {
 		float regularPrice = 0.5F;
 		Showing showing = new Showing(1,
 				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
-				LocalTime.of(8, 00));
+				LocalTime.of(8, 0));
 		Discount discount = new Discount1stOfTheDay();
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(0F - newPrice) < 0.001F);
@@ -145,7 +145,7 @@ class PricingTests {
 		float regularPrice = 0.5F;
 		Showing showing = new Showing(7,
 				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
-				LocalTime.of(16, 00));
+				LocalTime.of(16, 0));
 		Discount discount = new Discount7thOfTheDay();
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(0F - newPrice) < 0.001F);
@@ -157,7 +157,7 @@ class PricingTests {
 		float regularPrice = 0.5F;
 		Showing showing = new Showing(7,
 				new Movie(1, "Shazam! Fury Of The Gods", Duration.ofMinutes(130), null),
-				LocalTime.of(16, 00));
+				LocalTime.of(16, 0));
 		Discount discount = new Discount7thOfTheDay();
 		float newPrice = discount.getPrice(showing, regularPrice);
 		assertTrue(Math.abs(0F - newPrice) < 0.001F);
