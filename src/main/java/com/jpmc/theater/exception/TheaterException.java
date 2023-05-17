@@ -17,5 +17,9 @@ public class TheaterException extends Exception {
 	public TheaterException(Exception exception) {
 		super(exception);
 	}
+
+	public TheaterException(String message, Throwable cause) {
+		super(message, cause);
+	}
 	
 }
